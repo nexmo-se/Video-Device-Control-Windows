@@ -1,0 +1,26 @@
+﻿<Window x:Class="BasicVideoChat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BasicVideoChat"
+        xmlns:OpenTok="clr-namespace:OpenTok;assembly=WPFVideoRenderer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="640">
+    <Grid>
+        <Label x:Name="mic" Content="Microphone" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="34,0,0,0" Height="27"/>
+        <ComboBox x:Name="micBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,0,0,0" Height="27" Width="320"/>
+        <Label x:Name="spk" Content="Speaker" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="34,30,0,0" Height="27"/>
+        <ComboBox x:Name="spkBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,30,0,0" Height="27" Width="320"/>
+        <Label x:Name="st" Content="Session Status:" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="34,60,0,0" Height="27"/>
+        <Label x:Name="StatusLbl" Content="Disconnected" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="150,60,0,0" Height="27"/>
+        <!--Label x:Name="cam" Content="Camera" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="34,60,0,0" Height="27"/>
+        <ComboBox x:Name="camBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,60,0,0" Height="27" Width="320"/-->
+        <Button x:Name="ConnectButton" Width="120" Height="36" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,95,0,0">Connect</Button>
+        <Button x:Name="DisconnectButton" Width="120" Height="36" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140,95,0,0">Disconnect</Button>
+        <OpenTok:VideoRenderer x:Name="PublisherVideo" HorizontalAlignment="Left" Height="240" VerticalAlignment="Top" Width="320" Margin="0,150,0,0">
+        </OpenTok:VideoRenderer>
+        <OpenTok:VideoRenderer x:Name="SubscriberVideo" HorizontalAlignment="Right" Height="240" VerticalAlignment="Top" Width="320" Margin="0,150,0,0">
+        </OpenTok:VideoRenderer>
+    </Grid>
+</Window>
